@@ -47,6 +47,12 @@ function stopStream() {
 peer.on('call', function(call) {
 
   call.answer();
+  currentStatus.className = 'good';
+currentStatus.textContent = 'CONNECTED';
+currentStatus2.textContent = 'CONNECTED';
+currentStatus2.className = 'good';
+videochannel_master.className = 'good';
+videochannel_master.textContent = 'CONNECTED';
   console.log('Recieved call!');
   logs.className='good';
   logs.textContent = 'SUCESSFULLY connected to slave.';

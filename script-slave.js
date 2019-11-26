@@ -8,6 +8,7 @@ var videochannel_slave = document.getElementById('videochannel-slave');
 var idLoader = document.getElementById('admincode');
 var currentStatus = document.getElementById('currentstatus');
 var currentStep = document.getElementById('steps');
+var currentStatus2 = document.getElementById('currentstatus2');
 var peer = new Peer({key: 'lwjd5qra8257b9',debug: 3});
 async function waitForStream() {
 
@@ -39,6 +40,12 @@ function connectCall() {
   // Call a peer, providing our mediaStream
   try {
 var call = peer.call(slaveCode,screenshare);
+currentStatus.className = 'good';
+currentStatus.textContent = 'CONNECTED';
+currentStatus2.textContent = 'CONNECTED';
+currentStatus2.className = 'good';
+videochannel_master.className = 'good';
+videochannel_master.textContent = 'CONNECTED';
   } catch (err) {
     console.error(err);
     logs.className = 'error';

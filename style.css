@@ -1,0 +1,28 @@
+/* Copyright 2019 Titus Ramsarran. All rights reserved. No part of this work may be copied, edited, or republished in any way. */
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+  background-color: dimgrey;
+}
+tr,th,td,table {
+  border: 2px white;
+  border-style: solid;
+  color: black;
+  background-color: darkgray;
+}
+.info {
+  background-color: black;
+  color: white;
+}
+.good {
+  background-color: chartreuse;
+  color: black;
+}
+.warning {
+  background-color: yellow;
+  color: purple;
+}
+.error {
+  background-color: red;
+  color: white;
+}

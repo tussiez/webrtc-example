@@ -1,0 +1,44 @@
+<!-- Copyright 2019 Titus Ramsarran.  All rights reserved. No part of this work may be reproduced, edited, or republished in any way. -->
+<!DOCTYPE html>
+<html>
+  <Body>
+    <head><title>eggWatcher 0.1</title></head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- main -->
+    <h1> This is the ADMIN page. Please go to the <a href="slave.html">SLAVE</a> page to share your screen.</h1>
+     <table>
+       <tr>
+         <th>Data from:</th>
+         <th>Status:</th>
+         <th>Slave Code:</th>
+         <th>Step:</th>
+         <th>Video Channel:</th>
+       </tr>
+       <tr>
+         <td style="font-style: italic;">ADMIN</td>
+         <td><span class="error" id="currentstatus">OFFLINE</span></td>
+         <td><span id="admincode" class="info">Still generating...</span></td>
+         <td style="text-align: center;">N/A</td>
+         <td style="text-align: center;"><span id="videochannel-master" class="error">ONE-WAY CALL</span></td>
+         </tr>
+         <tr>
+          <td style="font-style: italic;">SLAVE</td>
+          <td><span class="error"id="currentstatus">OFFLINE</span></td>
+          <td style="text-align: center;"><span id="slavecode" class="info">Missing</span></td>
+          <td id="steps" style="text-align: center;">1-2</td>
+          <td style="text-align: center;"><span id="videochannel-slave" style="text-align: center;" class="error">OFFLINE</span><video id="streams" src="" height="400" width="400"></video><a href="#!" onclick="video.play()" style="color: white;text-decoration: none;">Click to play video</a></td>
+           </tr>
+           <tr><td style="font-style: italic;">SERVER</td>
+           <td id="logs"></td></tr>
+       </table>
+       <p>Instructions: </p>
+       <p>0. Click "CLICK." Select your screen.</p>
+       <p>1. Find friend. </p>
+       <p>2. Get them to go onto <a href="https://SNIPER-G.huntercarpente1.repl.co/slave.html">https://SNIPER-G.huntercarpente1.repl.co/slave.html</a></p>
+       <p>3. Give them the Slave Code.</p>
+       <p>4. Tell them to paste it into their Master Code field. </p>
+       <p>5. Now it should say that you are connected! </p>
+       <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </Body>
+  </html>

@@ -1,0 +1,46 @@
+<!-- Copyright 2019 Titus Ramsarran.  All rights reserved. No part of this work may be reproduced, edited, or republished in any way. -->
+<!DOCTYPE html>
+<html>
+  <Body>
+    <head><title>eggWatcher 0.1</title></head>
+    <style>
+      *:focus {
+    outline: none;
+}
+      </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <table>
+       <tr>
+         <th>Data from:</th>
+         <th>Status:</th>
+         <th>Slave Code:</th>
+         <th>Step:</th>
+         <th>Video Channel:</th>
+       </tr>
+       <tr>
+         <td style="font-style: italic;">ADMIN</td>
+         <td><span class="error" id="currentstatus">OFFLINE</span></td>
+         <td><span id="admincode" class="info">This makes no sense</span></td>
+         <td style="text-align: center;">N/A</td>
+         <td style="text-align: center;"><span id="videochannel-master" class="error">OFFLINE</span></td>
+         </tr>
+         <tr>
+          <td style="font-style: italic;">SLAVE</td>
+          <td><span class="error"id="currentstatus">OFFLINE</span></td>
+          <td style="text-align: center;"><input type="text" id="slavecode" class="info" placeholder="Paste admin code here"></span></td>
+          <td id="steps" style="text-align: center;">0</td>
+          <td style="text-align: center;"><span id="videochannel-slave" style="text-align: center;" class="error"><a href="#!" style="color: white;"onclick="waitForStream()">CLICK</a></span></td>
+           </tr>
+           <tr><td style="font-style: italic;">SERVER</td>
+           <td id="logs"></td><td><a href="#!" style="color: white;"  onclick="connectCall()">Click to connect!</a></tr>
+       </table>
+       <p>Instructions: </p>
+       <p>0. Click "CLICK." Select your screen.</p>
+        <p>1. Paste master code into "Paste admin code here" by double-clicking on it and pasting.</p>
+        <p>2. Have fun! </p>
+        <p> Alternate way: Use webcams(CHROMEBOOKS block screen sharing)<a href="#!" onclick="webcamAlt();">CLICK ME FOR WEBCAM</a></p>
+              <p> 10000. TRY CLICKING A COUPLE TIMES. doesnt work sometimes. also click play a couple times. idk why it does this but eek.
+       <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+    <script type="text/javascript" src="script-slave.js"></script>
+  </Body>
+  </html>

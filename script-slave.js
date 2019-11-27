@@ -40,12 +40,7 @@ function connectCall() {
   // Call a peer, providing our mediaStream
   try {
 var call = peer.call(slaveCode,screenshare);
-currentStatus.className = 'good';
-currentStatus.textContent = 'CONNECTED';
-currentStatus2.textContent = 'CONNECTED';
-currentStatus2.className = 'good';
-videochannel_master.className = 'good';
-videochannel_master.textContent = 'CONNECTED';
+
   } catch (err) {
     console.error(err);
     logs.className = 'error';

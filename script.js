@@ -1,4 +1,4 @@
-// Copyright 2019 Titus Ramsarran. All rights reserved. No section of this work should be copied, edited or reproduced in any way.
+console.log('Updated 4:42 pm 11/30/2019');
 var logs = document.getElementById('logs');
 var innerLogCount = 0;
 let screenshare = null;

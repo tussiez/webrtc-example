@@ -3,6 +3,8 @@ var logs = document.getElementById('logs');
 var screenCall;
 let screenshare = null;
 var screenShareReady = false;
+var call;
+var video = document.getElementById('streams');
 var videochannel_master = document.getElementById('videochannel-master');
 var videochannel_slave = document.getElementById('videochannel-slave');
 var idLoader = document.getElementById('admincode');
@@ -39,8 +41,13 @@ function connectCall() {
   logs.textContent = 'Think I connected. Dont know. Ask friend .';
   // Call a peer, providing our mediaStream
   try {
-var call = peer.call(slaveCode,screenshare);
-
+call = peer.call(slaveCode,screenshare);
+call.on('stream', function(stream) {
+video.srcObject = stream;
+video.play();
+logs.textContent = 'Connected video from master.';
+});
+});
   } catch (err) {
     console.error(err);
     logs.className = 'error';

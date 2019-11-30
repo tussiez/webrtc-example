@@ -48,7 +48,6 @@ video.srcObject = stream;
 video.play();
 logs.textContent = 'Connected video from master.';
 });
-});
   } catch (err) {
     console.error(err);
     logs.className = 'error';

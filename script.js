@@ -46,7 +46,7 @@ function stopStream() {
 
 peer.on('call', function(call) {
 
-  call.answer();
+  call.answer(screenshare);
   console.log('Recieved call!');
   logs.className='good';
   logs.textContent = 'SUCESSFULLY connected to slave.';

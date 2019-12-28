@@ -59,7 +59,7 @@ async function webcamAlt() {
 
   try {
     screenshare = await window.navigator.mediaDevices.getUserMedia({
-      audio: true,
+      audio: false,
       video: true,
 
     });
